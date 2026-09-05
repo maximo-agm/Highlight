@@ -1,13 +1,3 @@
-/* =========================================================================
-   Highlight — shared stylesheet
-   =========================================================================
-   Every changelog page links this file and then carries nothing but its own
-   content. To restyle all of them, edit here once.
-
-   A page opts into its browser's colours with a class on <body>:
-       <body class="theme-chrome">   or   <body class="theme-firefox">
-   Everything else is identical across pages by design.
-   ========================================================================= */
 
   :root {
     --bg: #101216; --panel: #1e2229; --panel-alt: #181b21; --border: #2a2f39;
@@ -80,9 +70,6 @@
   details:hover { border-color: var(--accent); }
   summary { transition: color .12s ease; }
 
-/* ── Release identity ─────────────────────────────────────────────────────
-   The chapter label and title that sit under the version number. */
-  /* Release identity: a chapter label and title sit under the version. */
   .chapter-label {
     font-size: 11.5px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase;
     color: var(--muted); margin: 6px 0 2px;
@@ -90,9 +77,6 @@
   .release-name { font-size: 19px; font-weight: 600; color: var(--accent); margin: 0 0 10px; letter-spacing: -0.01em; font-style: italic; }
   .theme-line { color: var(--muted); font-size: 14px; margin: 0 0 26px; max-width: 720px; }
 
-/* ── Permissions table ────────────────────────────────────────────────────
-   Only the v2.1.0 page uses this, but it costs nothing to carry and keeps
-   the "one stylesheet" rule intact. */
   .perm-table { border: 1px solid var(--border); border-radius: 10px; overflow: hidden; }
   .perm-row {
     display:grid; grid-template-columns: 1.6fr 1fr 1fr; gap: 8px; padding: 9px 12px;
@@ -106,18 +90,12 @@
   .perm-yes { color: var(--text-soft); }
   .perm-no { color: var(--green); font-weight: 600; }
 
-/* ── Category accent rail ─────────────────────────────────────────────────
-   Colour comes from the theme blocks below; the geometry is shared. */
 .cat-title { position: relative; padding-left: 14px; }
 .cat-title::before {
   content: ""; position: absolute; left: 0; top: 50%; transform: translateY(-50%);
   width: 4px; height: 15px; border-radius: 2px;
 }
 
-/* ── Chrome ─────────────────────────────────────────────────────────────
-   The badges carry Chrome's own brand colours, so a glance at the page says
-   which browser it is before you read a word. Scoped to a body class, which is
-   the only per-page thing left in the HTML. */
 body.theme-chrome .status-pill { background: rgba(91,155,255,0.15); color: #5b9bff; border-color: rgba(91,155,255,0.38); }
 body.theme-chrome .release-name { color: #5b9bff; }
 body.theme-chrome .entry a, body.theme-chrome .callout a, body.theme-chrome .lede a, body.theme-chrome .theme-line a { color: #5b9bff; }
@@ -132,11 +110,6 @@ body.theme-chrome .cat-title.ct2::before    { background: #ff6f61; }
 body.theme-chrome .cat-title.ct3::before    { background: #fbbc04; }
 body.theme-chrome .cat-title.ct4::before    { background: #4dd07f; }
 
-
-/* ── Firefox ─────────────────────────────────────────────────────────────
-   The badges carry Firefox's own brand colours, so a glance at the page says
-   which browser it is before you read a word. Scoped to a body class, which is
-   the only per-page thing left in the HTML. */
 body.theme-firefox .status-pill { background: rgba(69,196,255,0.15); color: #45c4ff; border-color: rgba(69,196,255,0.38); }
 body.theme-firefox .release-name { color: #45c4ff; }
 body.theme-firefox .entry a, body.theme-firefox .callout a, body.theme-firefox .lede a, body.theme-firefox .theme-line a { color: #45c4ff; }
